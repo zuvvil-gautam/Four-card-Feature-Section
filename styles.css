@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+
+
+:root{
+    --red: hsl(0, 78%, 62%);
+    --cyan: hsl(180, 62%, 55%);
+    --orange: hsl(34, 97%, 64%);
+    --blue: hsl(212, 86%, 64%);
+
+    --very-dark-Blue: hsl(234, 12%, 34%);
+    --Grayish-Blue: hsl(229, 6%, 66%);
+    --very-light-gray: hsl(0, 0%, 98%);
+}
+
+
+*{
+    margin:0;
+    padding:0;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    font-size:15px;
+    background-color: var(--very-light-gray);
+    color:var(--Grayish-Blue);
+}
+
+.container{
+    max-width: 1200px;
+    margin:0 auto;
+    padding:40px 30px;
+}
+
+header{
+    text-align:center;
+}
+
+header h2{
+    font-size:34px;
+    font-weight:200;
+    color:var(--very-dark-Blue);
+}
+
+header h3{
+    font-size:34px;
+    font-weight:600;
+    color:var(--very-dark-Blue);
+
+
+}
+
+header p{
+    max-width:500px;
+    margin:0 auto;
+    margin-top:20px;
+}
+
+.main{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap:25px;
+    margin-top:50px;
+}
+
+.card{
+    padding:25px;
+    border-radius: 7px;
+    text-align:right;
+    background-color: #fff;
+}
+
+.card-text{
+    text-align: left;
+    padding-bottom:35px;
+}
+
+.left{
+    border-top: 3px solid var(--cyan);
+}
+
+.mid1{
+    border-top: 3px solid var(--red);
+}
+
+.mid2{
+    border-top: 3px solid var(--orange);
+}
+
+.right{
+    border-top: 3px solid var(--blue);
+}
+
+.card-text h5{
+    color:var(--very-dark-Blue);
+    margin-bottom: 10px;
+}
+
+.middle{
+    display:flex;
+    flex-direction: column;
+    gap:25px;
+}
+
+.left, .right{
+    align-self:center;
+}
+
+@media only screen and (max-width:768px){
+    .main{
+        grid-template-columns: 1fr;
+    }
+}
+
+@media only screen and (max-width:425px){
+
+    body{
+        font-size:13px;
+    }
+    header h2{
+        font-size:22px;
+    }
+    
+    header h3{
+        font-size:22px;
+    }
+
+    .card{
+        padding:20px;
+    }
+
+    .card-text{
+        padding-bottom:25px;
+    }
+}
